@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react';
+import {
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Siso from './siso';
+import Sisoo from './sisoo';
+import Sisooo from './sisooo';
+import MyLady from "./mylady";
+export default class App extends React.Component{
+  render(){
+    return(
+      <div>
+        <Switch>
+        <Route exact path="/"  component={MyLady} />
+        <Route exact path="/siso"  component={Siso} />
+        <Route exact path="/sisoo"  component={Sisoo} />
+        <Route exact path="/sisooo"  component={Sisooo} />
+        <Redirect to="/" />
+        </Switch>
+      </div>
+    )
+  }
 }
-
-export default App;

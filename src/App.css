@@ -36,3 +36,75 @@
     transform: rotate(360deg);
   }
 }
+
+  .img{
+    display: block;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+    /* border-radius: 50%; */
+  }
+  .skillimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .proimg{
+    display: block;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+    border-radius: 20%;
+  }
+  .projectimg{
+    display: block;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 500px;
+  }
+  @keyframes moveInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    80%{
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-100px);
+    }
+  }
+  .text {
+    animation-name: moveInFromRight;
+    animation-duration: 5s;
+    /* animation-timing-function: ease-in; */
+  }
+
+  @keyframes moveInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    80%{
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  .forImage {
+    animation-name: moveInFromLeft;
+    animation-duration: 5s;
+    /* animation-timing-function: ease-in; */
+  }
